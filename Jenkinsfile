@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -8,14 +9,11 @@ pipeline {
 
     environment {
         CI = 'true'
-        SUPPLYOPS_EMAIL = credentials('supplyops-email')
-        SUPPLYOPS_PASSWORD = credentials('supplyops-password')
     }
 
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
                 echo 'SupplyOps source code checked out successfully.'
             }
         }
@@ -37,7 +35,18 @@ pipeline {
 
         stage('Run Playwright Tests') {
             steps {
-                bat 'npm test'
+                withCredentials([
+                    string(
+                        credentialsId: 'supplyops-email',
+                        variable: 'SUPPLYOPS_EMAIL'
+                    ),
+                    string(
+                        credentialsId: 'supplyops-password',
+                        variable: 'SUPPLYOPS_PASSWORD'
+                    )
+                ]) {
+                    bat 'npm test'
+                }
             }
         }
     }
