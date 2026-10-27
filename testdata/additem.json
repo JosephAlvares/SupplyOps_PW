@@ -1,0 +1,9 @@
+
+{
+  "item": "dish soap",
+  "category": "Cleaning",
+  "unit": "Pieces",
+  "startingQuantity": "10",
+  "currentQuantity": "10",
+  "pricePerUnit": "25.50"
+}

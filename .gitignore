@@ -1,0 +1,29 @@
+
+# Dependencies
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Playwright test artifacts
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Debug screenshots and recordings
+/activity-dashboard.png
+/activity-navigation-debug.png
+/inventory-navigation-debug.png
+/supplyops-navigation-debug.png
+*.webm
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/

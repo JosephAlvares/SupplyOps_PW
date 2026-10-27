@@ -1,0 +1,32 @@
+
+{
+  "name": "supplyops_pw",
+  "version": "1.0.0",
+  "description": "Playwright automation framework for SupplyOps Inventory",
+  "main": "index.js",
+  "type": "module",
+  
+  "keywords": [
+    "playwright",
+    "automation",
+    "supplyops"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.8"
+  },
+
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:integration": "playwright test --grep @integration",
+    "test:system": "playwright test --grep @system",
+    "report": "playwright show-report"
+  }
+}
