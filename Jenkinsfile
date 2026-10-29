@@ -11,6 +11,7 @@ pipeline {
         CI = 'true'
         SUPPLYOPS_EMAIL = credentials('supplyops-email')
         SUPPLYOPS_PASSWORD = credentials('supplyops-password')
+        PLAYWRIGHT_HTML_DO_NOT_INLINE_ASSETS = '1'
     }
 
     stages {
