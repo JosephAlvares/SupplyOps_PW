@@ -41,16 +41,23 @@ export default defineConfig({
   },
 
   // Browser projects.
-  projects: [
-    {
-      name: 'chromium',
-      use: {
-        ...devices['Desktop Chrome'],
-      },
+ 
+projects: [
+  {
+    name: "setup",
+    testMatch: /auth\.setup\.spec\.js/,
+  },
+  {
+    name: "chromium",
+    use: {
+      ...devices["Desktop Chrome"],
+      storageState: "playwright/.auth/user.json",
     },
+    dependencies: ["setup"],
+    testIgnore: /auth\.setup\.spec\.js/,
+  },
+],
 
-    // Add Firefox, WebKit, or other browser projects when required.
-  ],
 
   // Configure webServer here if the application needs to be started
   // automatically before running tests.
