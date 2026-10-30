@@ -37,7 +37,7 @@ export default defineConfig({
   // Shared settings for all browser projects.
   use: {
     // Collect a trace when a test fails on its first attempt.
-    trace: 'on-first-retry',
+    trace: 'on',
   },
 
   // Browser projects.
