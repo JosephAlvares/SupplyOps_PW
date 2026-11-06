@@ -10,8 +10,8 @@ class LoginPage {
       name: "Log In",
       exact: true,
     });
-   console.log("retrying to get the git conflict again");
-   
+
+    //checking conflict
     this.emailField = page.locator("#authEmail_input");
     this.passwordField = page.locator("#authPassword_input");
     this.submitButton = page.locator("#authSubmit");
@@ -36,7 +36,7 @@ class LoginPage {
         exact: true,
       }).count()
     );
-
+     
     console.log(
       "Page content:",
       (await this.page.locator("body").innerText()).slice(0, 1500)
