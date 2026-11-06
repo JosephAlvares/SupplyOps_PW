@@ -5,13 +5,13 @@ class LoginPage {
   constructor(page) {
     this.page = page;
 
-    console.log("get the git conflict");
 
     this.loginButton = page.getByRole("button", {
       name: "Log In",
       exact: true,
     });
-
+   console.log("retrying to get the git conflict again");
+   
     this.emailField = page.locator("#authEmail_input");
     this.passwordField = page.locator("#authPassword_input");
     this.submitButton = page.locator("#authSubmit");
