@@ -5,6 +5,8 @@ class LoginPage {
   constructor(page) {
     this.page = page;
 
+    console.log("get the git conflict");
+
     this.loginButton = page.getByRole("button", {
       name: "Log In",
       exact: true,
@@ -65,3 +67,6 @@ class LoginPage {
 }
 
 export { LoginPage };
+
+
+
