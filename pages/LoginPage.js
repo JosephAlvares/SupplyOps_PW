@@ -10,6 +10,7 @@ class LoginPage {
       exact: true,
     });
 
+    //checking conflict
     this.emailField = page.locator("#authEmail_input");
     this.passwordField = page.locator("#authPassword_input");
     this.submitButton = page.locator("#authSubmit");
@@ -34,7 +35,6 @@ class LoginPage {
         exact: true,
       }).count()
     );
-     await console.log("aishwarya conflict");
      
     console.log(
       "Page content:",
